@@ -224,10 +224,6 @@ body {
     width: 600px;
     
   }
-  .condiciones {
-    margin-left: 10px;
-    justify-content: center;
-  }
 
   .seccion1botones {
     margin: 0 auto;
@@ -248,7 +244,6 @@ body {
   .seccion2info {
     margin: 0 auto;
     text-align: center;
-    margin-top: -50px;
     
   }
 
