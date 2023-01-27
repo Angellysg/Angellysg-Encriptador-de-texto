@@ -1,0 +1,308 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffe8b8;
+  font-family: "Inter", sans-serif;
+}
+
+.grid-encriptador {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: minmax(70px, auto) 80vh minmax(50px, auto);
+  height: 100vh;
+  grid-template-areas:
+    "encabezado encabezado"
+    "seccion1 seccion2"
+    "piedepagina piedepagina";
+}
+
+/* CSS del encabezado */
+
+.grid-encriptador .encabezado {
+  grid-area: encabezado;
+  display: grid;
+  align-items: center;
+  justify-content: left;
+  grid-template-columns: 0.1fr 1fr;
+}
+
+.encabezadoimg {
+  place-self: center;
+}
+
+.encabezadotitle {
+  margin: 20px;
+  font-weight: 600;
+  font-size: x-large;
+  color: #573517;
+}
+
+/* CSS de la zona del encriptador */
+
+.grid-encriptador .seccion1 {
+  grid-area: seccion1;
+  display: grid;
+  grid-template-rows: 2.5fr 0.1fr 0.4fr;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.seccion1textarea {
+  background: none;
+  border: none;
+  margin: 20px 20px 20px 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #573517;
+  resize: none;
+  
+}
+
+.seccion1textarea::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #225e5c;
+}
+
+.seccion1textarea:focus {
+  outline: none;
+}
+
+.condiciones {
+  display: grid;
+  margin-left: 40px;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+}
+
+.condiciones p {
+  margin-left: 10px;
+}
+
+.seccion1botones {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+#encriptar {
+  background: #af5909;
+  color: #fff;
+}
+
+#desencriptar {
+  background: #ffe8b8;
+  color: #af5909;
+  border-color: #af5909;
+}
+
+.botones {
+  margin: 20px;
+  border-radius: 18px;
+  width: 300px;
+  height: 60px;
+  border: 1px solid;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow:  1px 8px 8px 1px #573517;
+
+}
+
+.botones:hover {
+  font-size: 19px;
+}
+
+/* CSS del mensaje encriptado o desencriptado */
+
+.grid-encriptador .seccion2 {
+  grid-area: seccion2;
+  display: grid;
+  background: #fff;
+  border-radius: 32px;
+  margin: 20px;
+  margin-right: 120px;
+  min-width: 340px;
+}
+
+.seccion2info {
+  margin: 0 32px;
+  text-align: center;
+  color: #225e5c;
+}
+
+.seccion2mensaje::placeholder {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: #573517;
+  opacity: 1;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.seccion2mensaje {
+  background-image: url(imagenes/muñeca.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 32px;
+  line-height: 150%;
+  color: #573517;
+  text-align: center;
+  resize: none;
+  margin: 0 auto;
+  width: 250px;
+  margin-top: 50px;
+}
+
+
+.seccion2mensaje:focus {
+  outline: none;
+}
+
+.botoncopiar.botones {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #af5909;
+  border-color: #af5909;
+  background-color: #fff;
+}
+
+/* CSS del pie de pagina */
+
+.grid-encriptador .piedepagina {
+  grid-area: piedepagina;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.textofooter {
+  margin-right: 10px;
+}
+
+.imgfooter {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Diseño responsive */
+
+@media screen and (max-width: 1060px) {
+  .grid-encriptador {
+    max-width: 700px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr 1fr 1fr;
+    grid-template-areas:
+      "encabezado"
+      "seccion1"
+      "seccion2"
+      "piedepagina";
+  }
+  .grid-encriptador .seccion1 {
+    grid-area: seccion1;
+    display: grid;
+    grid-template-rows: 400px 10px 100px;
+  }
+  
+  .seccion1textarea {
+    height: 350px;
+    width: 600px;
+    
+  }
+  .condiciones {
+    margin-left: 10px;
+    justify-content: center;
+  }
+
+  .seccion1botones {
+    margin: 0 auto;
+  }
+
+  .grid-encriptador .seccion2 {
+    justify-content: center;
+    height: 350px;
+  }
+  .seccion2 { 
+   width: 95%;
+   
+  }
+  .seccion2mensaje {
+    background-image: none;
+    
+  }
+  .seccion2info {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -50px;
+    
+  }
+
+  .seccion2mensaje {
+    width: 500px;
+    height: 250px;
+  }
+
+  .botones.botoncopiar {
+    width: auto;
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  
+  .encabezadoimg {
+    margin-left: 10px;
+  }
+
+  .seccion1textarea {
+    height: 300px;
+    width: 300px;
+  }
+
+  .seccion1botones {
+    grid-auto-flow: row;
+  }
+
+  .grid-encriptador .seccion1 {
+    grid-template-rows: 362px 10px 175px;
+  }
+
+  .condiciones {
+    margin-left: 10px;
+    justify-content: center;
+  }
+
+  .botones {
+    margin: 5px;
+  }
+
+  .grid-encriptador .seccion2 {
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .seccion2mensaje {
+    width: 290px;
+    height: 200px;
+  }
+  .grid-encriptador .piedepagina{
+    font-size: 0.75rem;
+  }
+}

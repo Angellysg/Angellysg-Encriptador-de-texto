@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+        <title>Encriptador de texto</title>
+    </head>
+    <body>
+        <main class="grid-encriptador">
+            <header class="encabezado">
+                <img class="encabezadoimg" src="imagenes/Logo.png" alt="Logo">
+                <h1 class="encabezadotitle" >Encriptador de texto</h1>
+            </header>        
+            <section class="seccion1">
+                    <textarea class="seccion1textarea" cols="10" rows="6" placeholder="Ingrese el texto aqui"></textarea>
+
+                <div class="condiciones">
+                    <img src="imagenes/Vector.png" alt="condiciones">
+                    <p>Solo letras minúsculas y sin acentos.</p>
+                </div>
+
+                <div class="seccion1botones">
+                    <button class="botones" id="encriptar" onclick="encriptarBtn()">Encriptar</button>
+                    <button class="botones" id="desencriptar" onclick="desencriptarBtn()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="seccion2">
+                <textarea class="seccion2mensaje" readonly placeholder="Ningún mensaje fue encontrado" cols="90" rows="8"></textarea>
+                <p class="seccion2info" >Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="botones botoncopiar" onclick="copiar()" >Copiar</button>
+            </section>
+            <footer class="piedepagina">
+                <p class="textofooter">Hecho por Angelly Sepulveda - Enero 2023</p>
+                <a href="https://www.linkedin.com/in/angellysg/" target="_blank"><img class="imgfooter" src="imagenes/linkedin.png" alt="Mi linkedin"></a>
+                <a href="https://github.com/Angellysg" target="_blank"><img class="imgfooter" src="imagenes/github.png" alt="Mi github"></a>
+                
+            </footer>
+        </main>
+        <script src="script.js"> </script>
+        </body>
+</html>
