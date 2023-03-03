@@ -11,6 +11,7 @@ La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"
 
 Por ejemplo:
+
 "gato" => "gaitober" 
 
 gaitober" => "gato"
