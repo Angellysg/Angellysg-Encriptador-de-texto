@@ -23,9 +23,9 @@ gaitober" => "gato"
 
 Funciones:
 
-Fuuncionar solo con letras minúsculas.
+Funciona solo con letras minúsculas.
 
 No deben ser utilizados letras con acentos ni caracteres especiales.
 
-Convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
+Convertir una palabra para la versión encriptada, también devolver una palabra encriptada para su versión original.
 
